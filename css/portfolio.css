@@ -1,0 +1,288 @@
+/* Responsive breakpoint behaviopur definition */
+/* Smallest breakpoint */
+@media (max-width: 600px) {
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contactForm{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #horizDivider{
+    display: block;
+  }
+}
+/* Medium breakpoint */
+@media (min-width: 600px) {
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .intro{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  article{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  #horizDivider{
+    display: block;
+  }
+  input[type=textarea], select {
+    width: 60%;
+  }
+  .breadcrumbNav .hideMe{
+    display:list-item;
+  }
+}
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 768px) {
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .intro{ 
+    border-left: 15px solid #72ABBB;
+    padding-left: 20px;
+    max-width: 70vw;
+  }
+  article{ 
+    padding-left: 35px;
+    max-width: 70vw;
+  }
+  #horizDivider{
+    display: none;
+  }
+  .contactForm{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Main element styling */
+html { 
+  font-size: 22px;
+  background: #f5f5f5;
+}
+body {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  line-height: 1.8rem;
+  margin: 0px;
+  text-align: center;
+  box-sizing: border-box;
+}
+h1{
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: rgb(96, 96, 96);
+}
+a{
+  color: black;
+  /* Create the dashed underline which sits a bit further down than normal 'underline' */
+  text-decoration: none;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+/* Header and breadcrumb */
+header{
+  color: black;
+  width: 100%;
+  height: 40px;
+  background: rgb(108,169,223);
+  background: linear-gradient(-315deg, rgba(108,169,223,1) 0%, rgb(81, 177, 158) 100%);
+  border-bottom: 1px solid black;
+}
+header .left{
+  float: left;
+  padding-left: 20px;
+}
+header .right{
+  float: right;
+  padding-right: 20px;
+}
+header h4{
+  margin: 0px;
+  font-size: 0.8rem;
+}
+header a{
+  color: black;
+  text-decoration: none;
+}
+.breadcrumbNav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.breadcrumbNav li {
+    margin: 0px;
+    font-size: 0.8rem;
+    float: left;
+    padding-right: 0.4rem;
+    font-weight: 600;
+}
+.breadcrumbNav li a {
+  text-decoration: none;
+}
+.hideMe{
+  display: none;
+}
+.isSavable{
+  width: 100%;
+}
+aside{
+  border-left: 10px solid #72ABBB;
+  margin-left: 20px;
+  padding-left: 20px;
+  font-size: smaller;
+}
+
+
+article{
+  max-width: 30rem;
+  margin: auto;
+  text-align: left;
+}
+.pictCaption{
+  font-size: large;
+  line-height: 1.3rem;
+}
+
+/* Class styling */
+.thumbSub{
+  font-size: smaller;
+  line-height: 1.3rem;
+  color: rgba(34, 34, 34, .5);
+  margin-top: 0px;
+}
+.intro{
+  max-width: 30rem;
+  margin: 12vh auto 6vh auto;
+  text-align: left;
+}
+.content{
+  padding: 16px;
+}
+.grid {
+  max-width: 1200px;
+  margin: 6vh auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+.gridItem {
+  height: 100%;
+  align-self: start;
+  /* background-color: dodgerblue; */
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  text-align: center;
+}
+.gridItem a{
+  text-decoration: none;
+  border-bottom-style:none;
+/*   border-bottom-width: 1px;
+  border-bottom-color: black; */
+}
+.gridItem img{
+  max-width: 100%;
+  border-top-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+
+/* Creates a subtle hover effect on image-links */
+.gridItem img:hover{
+  filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(65%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */ 
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+
+.caseStudeHeroIm img{
+  width: 75%;
+  max-width: 1200px;
+}
+
+/* ID styling */
+#horizDivider{
+  width: 100%;
+  height: 15px;
+  background-color: #72ABBB;
+  margin-top: 6vh;
+}
+
+footer{
+  margin-top: 6vh;
+  padding-bottom: 6vh;
+  border-top: 1px solid black;
+  color: rgb(88, 88, 88);
+  width: 100%;
+  /* height: 100px; */
+  background-color: rgb(255, 255, 255)
+}
+.comment{
+/*   margin-top: 6vh;
+  padding-bottom: 6vh; */
+  color: rgb(88, 88, 88);
+  width: 50%;
+  margin: auto;
+  /* height: 100px; */
+}
+.comment .rightSide{
+  width: 205%;
+}
+.commentPG{
+  font-size: smaller;
+}
+
+/* Form styling  */
+.contactForm{max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 20px;
+}
+.contactForm .rightSide{
+  text-align: left;
+}
+.contactForm .leftSide{
+  text-align: left;
+}
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+textarea::placeholder {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.messageArea{
+  width: 100%;
+  height: 200px;
+}
+label{
+  font-size: .8rem;
+}
+#submit {
+  font-size: .8rem;
+  width: 100px;
+  background-color: #72ABBB;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+

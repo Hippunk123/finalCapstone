@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href = "./css/portfolio.css" rel = "stylesheet" type = "text/css">
+        <!-- Media queries to switch to an image when the content gets too squished -->
+
+
+        <title>Your saved items</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- I am using a Googlefont -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600,400,200" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="savedPage">
+        <!-- header bar / navigation holder-->
+        <header>
+            <div class = "left">
+                <ul class = "breadcrumbNav">
+                    <li><a href = "index.html">My Web Development Portfolio</a></li>
+                    <li class = "hideMe">></li>
+                    <li class = "hideMe">Your saved items</li>
+                </ul>
+            </div> 
+            <div class = "right">
+                <ul class = "breadcrumbNav">
+                    <li><a href = "#footer">Contact me</a></li>
+                    <li>|</li>
+                    <li id="itemsAlert"><a href = "saved-items.html">Saved items<span id = 'savedItemsAlert'></span></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- A holder to separate content area from header and footer (for page padding purposes)-->
+        <div class="content">
+            <!-- Intro paragraph-->
+            <button class="deleteAll" id="deleteAll" style="position: relative; float: right;">Delete all saved items</button>
+            <h1>Your saved items</h1>
+            <hr>
+            <div id = "showSavedItems" class ="grid"></div>
+        </div>
+
+
+            
+  
+
+        <!-- Footer bar -->
+        <footer id="footer">
+            <h4>To get in touch, please send me a message</h4>
+            <form class = "contactForm" action = "#">
+                <div class="leftSide">
+                    <div>
+                        <label>Your name</label>
+                        <input type = "text" name="name" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label>Your email address</label>
+                        <input type = "text" name= "lastname" placeholder="Your email address">
+                    </div>
+                    <div>
+                        <input type = "radio" >
+                        <label>Newsletter?</label>
+                    </div>
+                </div>
+
+                <div class = "rightSide">
+                    <label>Your message</label>
+                    <input type = "text" class = "messageArea">
+                    <button class="button" id="submit">Submit</button>
+                </div>
+            </form>
+        </footer>
+    </body>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/saved-items.js"></script>
+</html>

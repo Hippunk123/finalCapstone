@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href = "./css/portfolio.css" rel = "stylesheet" type = "text/css">
+        <!-- Media queries to switch to an image when the content gets too squished -->
+
+
+        <title>Web development portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- I am using a Googlefont -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600,400,200" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- header bar / navigation holder-->
+        <header>
+            <div class = "left">
+                <ul class = "breadcrumbNav">
+                    <li>My Web Development Portfolio</li>
+                </ul>
+            </div>
+            <div class = "right">
+                <ul class = "breadcrumbNav">
+                    <li><a href = "#footer">Contact me</a></li>
+                    <li>|</li>
+                    <li id="itemsAlert"><a href = "saved-items.html">Saved items<span id = 'savedItemsAlert'></span></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- A holder to separate content area from header and footer (for page padding purposes)-->
+        <div class = "content">
+            <!-- Intro paragraph-->
+            <div class = "intro isSavable">
+                <h1>Hello. Welcome to my portfolio</h1>
+                <h2>My name is Neil</h2>
+                <p><strong>I am currently under-going a career 'realignment' in order to satisfy a long-held desire to get involved with software development.</strong></p>
+                <div id = "horizDivider"></div>
+            </div>
+            
+            <!-- First article under the intro -->
+            <article>
+                <h4>Training</h4>
+                <p class = "isSavable">In order to achieve this, I enrolled on an intensive bootcamp with <a href = "https://www.hyperiondev.com">Hyperiondev</a>
+                    to study Full Stack Web Development.  As a part of the course, I am learning:</p>
+                    <ul class = "isSavable">
+                        <li>Javascript</li>
+                        <li>Object-oriented programming</li>
+                        <li>Node.js</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                <p class = "isSavable">I am currently a user experience designer of some 25 years.  Please see some examples of my work below:</p>
+            </article>
+
+            <!-- Gallery grid -->
+            <div class = "grid">
+                <article class = "gridItem isSavable">
+                    <a href = "./happy.html">
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="./images/happy_thumb@2x.jpg">
+                            <img src = "./images/happy_thumb@1x.jpg" alt="Happy thumbnail">
+                        </picture>
+                        <h3 class = "pictCaption">Happy website</h3>
+                        <p class = thumbSub>Ground-up relaunch of award-winning B-Corp training and development services provider</p>
+                    </a>
+                </article>
+                <article class = "gridItem isSavable">
+                    <a href = "./cedar.html">
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="./images/cedar_thumb@2x.jpg">
+                            <img src = "./images/cedar_thumb@1x.jpg" alt="Happy thumbnail">
+                        </picture>
+                        <h3 class = "pictCaption">New website for Cedar Communications</h3>
+                        <p class = thumbSub>User experience design for global content marketing agency</p>
+                    </a>
+                </article>
+                <article class = "gridItem isSavable">
+                    <a href = "./reed.html">
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="./images/Reed_thumb@2x.jpg">
+                            <img src = "./images/Reed_thumb@1x.jpg" alt="Reed thumbnail">
+                        </picture>
+                        <h3 class = "pictCaption">Reed Global Website Relaunch</h3>
+                        <p class = thumbSub>Relaunching Reed Global's international website and jobs board</p>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Article beneath gallery -->
+            <article>
+                <h4>My goals</h4>
+                <p class = "isSavable">My aim is to start by finding work which integrates my design skills with some 
+                    coding/development, and eventually segway into full time software developement roles.</p>
+                <aside class = "isSavable">Many years ago, I used to develop Actionscript for Flash, which was a ECMA script.  I think this is where my interest in software development stems from...</aside>
+                <p class = "isSavable">In the meantime, I aim to post progress and any projects that I create right here on this portfolio - so do check back to see 
+                    what I have been up to.</p>
+            </article>
+
+        </div>
+
+        <!-- Footer bar -->
+        <footer id="footer">
+            <h4>To get in touch, please send me a message</h4>
+            <form class = "contactForm" action = "#">
+                <div class="leftSide">
+                    <div>
+                        <label>Your name</label>
+                        <input type = "text" name="name" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label>Your email address</label>
+                        <input type = "text" name= "lastname" placeholder="Your email address">
+                    </div>
+                    <div>
+                        <input type = "radio" >
+                        <label>Newsletter?</label>
+                    </div>
+                </div>
+
+                <div class = "rightSide">
+                    <label>Your message</label>
+                    <textarea type = "text" class = "messageArea"></textarea>
+                    <button class="button" id="submit"id="submit">Submit</button>
+                </div>
+            </form>
+        </footer>
+    </body>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</html>

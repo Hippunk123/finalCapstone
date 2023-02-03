@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href = "./css/portfolio.css" rel = "stylesheet" type = "text/css">
+        <!-- Media queries to switch to an image when the content gets too squished -->
+
+
+        <title>Web development portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- I am using a Googlefont -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600,400,200" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- header bar / navigation holder-->
+        <header>
+            <div class = "left">
+                <ul class = "breadcrumbNav">
+                    <li><a href = "./index.html">My Web Development Portfolio</a></li>
+                    <li class = "hideMe">></li>
+                    <li class = "hideMe">Reed case study</li>
+                </ul>
+            </div>
+            <div class = "right">
+                <ul class = "breadcrumbNav">
+                    <li><a href = "#footer">Contact me</a></li>
+                    <li>|</li>
+                    <li id="itemsAlert"><a href = "./saved-items.html">Saved items<span id = 'savedItemsAlert'></span></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- A holder to separate content area from header and footer (for page padding purposes)-->
+        <div class = "content">
+            <!-- Intro paragraph-->
+            <div class = "intro">
+                <h1>Reed</h1>
+                <p class = "isSavable"><strong><a href="https://en.wikipedia.org/wiki/Alec_Reed">Founded in 1960</a> by Sir Alec Reed, Reed is the <strong>#1 recruitment firm</strong> in the UK. In 2017, <a href="https://www.cedarcom.co.uk">Cedar Communications</a> won a pitch to completely redesign the <a href="https://www.reedglobal.com">Reed Global</a> website and jobs board.</strong></p>
+                <div id = "horizDivider"></div>
+            </div>
+
+            <picture class = "caseStudeHeroIm isSavable">
+                <source media="(min-width: 600px)" srcset="./images/reed_hero@2x.jpg">
+                <img src = "./images/reed_hero@1x.jpg" alt="Reed thumbnail">
+            </picture>
+            <div class = "pictCaption">Reed Global Website Relaunch</div>
+            <!-- First article under the intro -->
+            <article>
+                <h2>My role</h2>
+                <p class = "isSavable">I was hired by one of my regular clients, Cedar, as lead UX architect and designer, responsible for delivering all UX-related aspects of the project from initial pitch to final handover:
+                </p>
+                    <ul class = "isSavable">
+                        <li>Key part of initial pitch team</li>
+                        <li>Discovery (stakeholder workshops, peer and competitive review, requirements gathering)</li>
+                        <li>Information architecture, content taxonomy and prioritisation</li>
+                        <li>Creation, testing and validation of wireframes and prototypes</li>
+                        <li>Interaction design, visual design</li>
+                        <li>Documentation and styleguide creation</li>
+                        <li>Interaction design, visual design</li>
+                    </ul>
+                    <hr>
+            </article>
+
+        </div>
+
+            <!-- Comments go here -->
+            <article id = "attachComments"></article>
+            
+
+            <!-- Comments bar -->
+            <div class = "comment">
+                <form class = "contactForm">
+                    <div class = "rightSide">
+                        <label>Leave a comment</label>
+                        <textarea name = "commentArea" class = "messageArea comment" id = "commentArea" placeholder="Your comment"></textarea>
+                        <button type="button" id="postComment">Leave comment</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bar -->
+        <footer id="footer">
+            <h4>To get in touch, please send me a message</h4>
+            <form class = "contactForm" action = "#">
+                <div class="leftSide">
+                    <div>
+                        <label>Your name</label>
+                        <input type = "text" name="name" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label>Your email address</label>
+                        <input type = "text" name= "lastname" placeholder="Your email address">
+                    </div>
+                    <div>
+                        <input type = "radio" >
+                        <label>Newsletter?</label>
+                    </div>
+                </div>
+
+                <div class = "rightSide">
+                    <label>Your message</label>
+                    <textarea name = "messageArea" class = "messageArea" id = "messageArea" placeholder="Your message"></textarea>
+                    <button class="button" id="submit">Submit</button>
+                </div>
+            </form>
+        </footer>
+    </body>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</html>
